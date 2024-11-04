@@ -64,15 +64,15 @@ cd /root/windisk
 
 mkdir winfile
 
-wget -O win10.iso --user-agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36" https://bit.ly/3UGzNcB
+wget -O windows2022.iso 'https://software-static.download.prss.microsoft.com/sg/download/888969d5-f34g-4e03-ac9d-1f9786c66749/SERVER_EVAL_x64FRE_en-us.iso'
 
-mount -o loop win10.iso winfile
+mount -o loop windows2022.iso winfile
 
 rsync -avz --progress winfile/* /mnt
 
 umount winfile
 
-wget -O virtio.iso https://bit.ly/4d1g7Ht
+wget -O virtio-win.iso 'https://fedorapeople.org/groups/virt/virtio-win/direct-downloads/archive-virtio/virtio-win-0.1.262-2/virtio-win.iso'
 
 mount -o loop virtio.iso winfile
 
